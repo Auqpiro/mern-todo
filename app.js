@@ -9,7 +9,7 @@ import todoRouter from "./routes/todoRouter.js";
 dotenv.config();
 
 const PORT = process.env.PORT || 5000;
-const DB_CONNECT = process.env.DB_CONNECT || 'mongodb://127.0.0.1:27017/todos';
+const DB_CONNECT = process.env.DB_CONNECT;
 
 mongoose
   .connect(DB_CONNECT)
