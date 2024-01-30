@@ -1,0 +1,22 @@
+$colors: ("danger": #d21919, "warning": #d27c19, "primary": #1976d2, "secondary": #9FA6B2, "success": #198754);
+
+.button {
+  border-radius: 5px;
+  padding: 8px 20px;
+  cursor: pointer;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @each $name, $value in $colors {
+    &.button_#{$name} {
+      border: 1px solid rgba($value, 0.5);
+      color: $value;
+
+      &:hover {
+        background-color: rgba($value, 0.1);
+      }
+    }
+  }
+}

@@ -24,7 +24,7 @@ export const todosApi = createApi({
         method: 'POST',
         body,
       }),
-      invalidatesTags: ['todo'],
+      invalidatesTags: (_, _err, { id }) => [{ type: 'todo', id }],
     }),
     editTodo: builder.mutation({
       query: ({ id, body }) => ({
@@ -32,7 +32,7 @@ export const todosApi = createApi({
         method: 'PATCH',
         body,
       }),
-      invalidatesTags: (_, _err, { id }) => ([{ type: 'todo', id }]),
+      invalidatesTags: (_, _err, { id }) => [{ type: 'todo', id }],
     }),
     deleteTodo: builder.mutation({
       query: (id) => ({

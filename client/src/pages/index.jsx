@@ -5,7 +5,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import Main from "./Main";
+import Main from "pages/Main";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

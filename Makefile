@@ -12,3 +12,9 @@ lint:
 
 start:
 	npm start
+
+server:
+	npm start
+
+client:
+	npm run dev --prefix client
